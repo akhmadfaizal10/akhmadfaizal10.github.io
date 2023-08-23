@@ -59,6 +59,7 @@ footer {
   overflow: visible;
   width: 190px;
   height: 254px;
+  margin-bottom: 10px;
 }
 
 .content {
@@ -376,4 +377,85 @@ footer {
   padding: 20px;
 
   font-size: 0.8rem;
+}
+#projects {
+  text-align: center; /* Pusatkan kartu di dalam bagian projects */
+}
+
+#projects ul {
+  list-style-type: none; /* Hilangkan poin (bullets) pada daftar */
+  padding: 0;
+  display: flex; /* Buat elemen <li> sejajar dalam satu baris */
+  justify-content: space-between; /* Tambahkan jarak antara kartu */
+}
+.content {
+  position: relative;
+}
+
+.card:hover .back-content {
+  opacity: 1;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.logo {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  width: 80%;
+  height: auto;
+  margin-bottom: 10%;
+  margin-right: 12%;
+}
+.textsaya {
+  margin-top: 6%;
+}
+/* Gaya untuk tombol menu (hamburger) */
+.menu-icon {
+  display: none; /* Sembunyikan pada tampilan desktop */
+  cursor: pointer; /* Tambahkan efek kursor */
+}
+
+/* Gaya untuk daftar navigasi */
+.menu {
+  list-style: none;
+  display: flex;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+/* Media query untuk tampilan ponsel */
+@media (max-width: 768px) {
+  .menu {
+    display: none; /* Sembunyikan daftar navigasi pada tampilan ponsel */
+    flex-direction: column;
+    background-color: #f8f8f8;
+    position: relative;
+    top: 60px; /* Atur jarak dari atas */
+    left: 0;
+    width: 100%;
+  }
+
+  .menu.show {
+    display: flex; /* Tampilkan daftar navigasi saat tombol menu ditekan */
+  }
+
+  .menu-icon {
+    display: block; /* Tampilkan tombol menu pada tampilan ponsel */
+    background: url("bukutamu.png"); /* Ganti dengan path ke gambar ikon */
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  #projects ul {
+    flex-direction: column-reverse;
+  }
 }
