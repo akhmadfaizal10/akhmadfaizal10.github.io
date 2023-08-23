@@ -8,7 +8,6 @@ header {
 .container {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 nav ul {
@@ -422,7 +421,6 @@ footer {
 /* Gaya untuk daftar navigasi */
 .menu {
   list-style: none;
-  display: flex;
 }
 
 .menu li {
@@ -430,12 +428,12 @@ footer {
 }
 
 /* Media query untuk tampilan ponsel */
-@media (max-width: 768px) {
+@media (max-width: 400px) {
   .menu {
     display: none; /* Sembunyikan daftar navigasi pada tampilan ponsel */
     flex-direction: column;
     background-color: #f8f8f8;
-    position: relative;
+    position: absolute;
     top: 60px; /* Atur jarak dari atas */
     left: 0;
     width: 100%;
@@ -454,8 +452,11 @@ footer {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   #projects ul {
     flex-direction: column-reverse;
+  }
+  li {
+    margin-bottom: 30px;
   }
 }
