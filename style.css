@@ -454,7 +454,7 @@ footer {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 768px) {
   #projects ul {
     flex-direction: column-reverse;
   }
