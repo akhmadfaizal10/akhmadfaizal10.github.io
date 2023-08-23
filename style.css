@@ -1,0 +1,379 @@
+/* CSS Anda akan berada di file terpisah untuk memisahkan tampilan dari struktur HTML */
+
+header {
+  background-color: none;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2.5rem;
+}
+
+nav li {
+  margin-left: 20px;
+  display: block;
+  transition: 0.5s;
+}
+nav ul:hover li {
+  filter: blur(5px);
+}
+nav ul li:hover {
+  filter: blur(0px);
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+/* CSS Anda akan berada di file terpisah untuk memisahkan tampilan dari struktur HTML */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+section {
+  padding: 40px;
+}
+
+footer {
+  background: none;
+}
+.card {
+  overflow: visible;
+  width: 190px;
+  height: 254px;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 300ms;
+  box-shadow: 0px 0px 10px 1px #000000ee;
+  border-radius: 5px;
+}
+
+.front,
+.back {
+  background-color: #151515;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.back {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.back::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 160px;
+  height: 160%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #66dbff,
+    #66dbff,
+    #66dbff,
+    #66dbff,
+    transparent
+  );
+  animation: rotation_481 5000ms infinite linear;
+}
+
+.back-content {
+  position: relative;
+  width: 99%;
+  height: 99%;
+  background-color: #151515;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+}
+
+.card:hover .content {
+  transform: rotateY(180deg);
+}
+
+@keyframes rotation_481 {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  0% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.front {
+  transform: rotateY(180deg);
+  color: white;
+}
+
+.front .front-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.front-content .badge {
+  background-color: #00000055;
+  padding: 2px 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
+  width: fit-content;
+}
+
+.description {
+  box-shadow: 0px 0px 10px 5px #00000088;
+  width: 100%;
+  padding: 10px;
+  background-color: #00000099;
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+}
+
+.title {
+  font-size: 11px;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title p {
+  width: 50%;
+}
+
+.card-footer {
+  color: white;
+  margin-top: 5px;
+  font-size: 8px;
+}
+
+.front .img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #ffbb66;
+  position: relative;
+  filter: blur(15px);
+  animation: floating 2600ms infinite linear;
+}
+
+#bottom {
+  background-color: #ff8866;
+  left: 50px;
+  top: 0px;
+  width: 150px;
+  height: 150px;
+  animation-delay: -800ms;
+}
+img {
+  margin: 0;
+  padding: 0;
+}
+#right {
+  background-color: #ff2233;
+  left: 160px;
+  top: -80px;
+  width: 30px;
+  height: 30px;
+  animation-delay: -1800ms;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Hindari gambar keluar dari batas kartu */
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Gambar akan menyesuaikan dan memotong sesuai batas kartu */
+}
+
+/* Tambahan gaya lain yang diperlukan */
+.content {
+  position: relative;
+}
+
+.message {
+  margin-top: -10%;
+  width: 8em;
+  height: 12em;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #9ad5fa;
+  border-radius: 2em;
+}
+
+.message::before {
+  content: "thank";
+  position: absolute;
+  top: 0;
+  width: 7em;
+  height: 12em;
+  background-color: rgb(235, 110, 101);
+  transition: opacity 0.3s ease-in-out;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  border-radius: 2em;
+  justify-content: center;
+}
+
+.message::after {
+  content: "you";
+  position: absolute;
+  top: 0;
+  width: 7em;
+  height: 12em;
+  background-color: rgb(235, 110, 101);
+  transition: opacity 0.3s ease-in-out;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  border-radius: 2em;
+
+  justify-content: center;
+}
+
+.message:hover:before {
+  left: -7em;
+  margin-top: 1em;
+  transform: rotate(-15deg);
+  animation: slide-left 0.8s;
+  transition: 0.5s ease-in-out;
+}
+
+.message:hover:after {
+  right: -7em;
+  margin-top: 1em;
+  transform: rotate(15deg);
+  animation: slide-right 0.8s;
+  transition: 0.5s ease-in-out;
+}
+
+@keyframes slide-left {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: -3em;
+  }
+
+  100% {
+    left: -7em;
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    right: 0;
+  }
+
+  100% {
+    right: -3em;
+  }
+
+  100% {
+    right: -7em;
+  }
+}
+
+.message:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.596);
+}
+
+.message:hover::after {
+  box-shadow: 3px 1px 10px rgba(0, 0, 0, 0.596);
+}
+
+.message:hover::before {
+  box-shadow: -3px 1px 10px rgba(0, 0, 0, 0.596);
+}
+
+body {
+  background: rgb(12, 4, 89);
+  background: linear-gradient(
+    120deg,
+    rgba(12, 4, 89, 1) 0%,
+    rgba(142, 75, 113, 1) 100%
+  );
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  color: azure;
+  margin: 0;
+  padding: 0;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+
+  font-size: 0.8rem;
+}
