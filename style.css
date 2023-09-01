@@ -160,15 +160,6 @@ footer {
   width: fit-content;
 }
 
-.description {
-  box-shadow: 0px 0px 10px 5px #00000088;
-  width: 100%;
-  padding: 10px;
-  background-color: #00000099;
-  backdrop-filter: blur(5px);
-  border-radius: 5px;
-}
-
 .title {
   font-size: 11px;
   max-width: 100%;
@@ -194,24 +185,6 @@ footer {
   object-position: center;
 }
 
-.circle {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  background-color: #ffbb66;
-  position: relative;
-  filter: blur(15px);
-  animation: floating 2600ms infinite linear;
-}
-
-#bottom {
-  background-color: #ff8866;
-  left: 50px;
-  top: 0px;
-  width: 150px;
-  height: 150px;
-  animation-delay: -800ms;
-}
 img {
   margin: 0;
   padding: 0;
@@ -362,7 +335,8 @@ body {
     rgba(12, 4, 89, 1) 0%,
     rgba(142, 75, 113, 1) 100%
   );
-  height: auto;
+  width: 100%;
+  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -428,35 +402,30 @@ footer {
 }
 
 /* Media query untuk tampilan ponsel */
-@media (max-width: 400px) {
-  .menu {
-    display: none; /* Sembunyikan daftar navigasi pada tampilan ponsel */
-    flex-direction: column;
-    background-color: #f8f8f8;
-    position: absolute;
-    top: 60px; /* Atur jarak dari atas */
-    left: 0;
-    width: 100%;
-  }
-
-  .menu.show {
-    display: flex; /* Tampilkan daftar navigasi saat tombol menu ditekan */
-  }
-
-  .menu-icon {
-    display: block; /* Tampilkan tombol menu pada tampilan ponsel */
-    background: url("bukutamu.png"); /* Ganti dengan path ke gambar ikon */
-    background-size: contain;
-    width: 30px;
-    height: 30px;
+@media (max-width: 768px) {
+  .menu > li {
+    margin-left: auto;
   }
 }
 
-@media (max-width: 900px) {
+.textsaya {
+  margin-right: 10%;
+  font-size: 200%;
+}
+
+@media (max-width: 768px) {
   #projects ul {
     flex-direction: column-reverse;
   }
   li {
     margin-bottom: 30px;
+  }
+  .textsaya {
+    font-size: 20px;
+    width: 50%;
+  }
+  .fotosaya {
+    margin-top: 100px;
+    margin-left: 20px;
   }
 }
