@@ -38,10 +38,10 @@ const Footer: React.FC = () => {
             viewport={{ once: true }}
             className="mt-6"
           >
-            <p className="text-xs text-gray-600 font-inter">
+          <p className="text-xs text-gray-600 font-inter">
               Designed with futuristic aesthetics and built with modern technologies
             </p>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
     </footer>
